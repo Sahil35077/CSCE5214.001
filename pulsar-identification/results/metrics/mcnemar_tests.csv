@@ -1,0 +1,4 @@
+model_a,model_b,n_a_correct_b_wrong,n_a_wrong_b_correct,statistic,pvalue,method
+MARS,KNN,11,17,0.8928571428571429,0.3447042220069577,corrected
+MARS,ANN,6,11,6.0,0.332305908203125,exact
+KNN,ANN,13,12,0.0,1.0,corrected

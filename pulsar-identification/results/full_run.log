@@ -1,0 +1,66 @@
+========================================================================
+CSCE 5214 Pulsar Identification Pipeline
+Official UCI HTRU2 (17,898 rows) | MARS / KNN / ANN
+========================================================================
+[data_loader] === UCI HTRU2 Invariant Check ===
+  provenance     : local_csv:HTRU_2.csv
+  shape          : (17898, 9)  (expected (17898, 9))
+  missing values : 0     (expected 0)
+  duplicate rows : 0     (expected 0)
+  class 0        : 16259 (90.84%)  expected 16259 (90.84%)
+  class 1        : 1639 (9.16%)  expected 1639  (9.16%)
+  features (X excludes target — zero target leakage):
+    [0] mean_integrated_profile: Mean of the integrated pulse profile
+    [1] std_integrated_profile: Standard deviation of the integrated pulse profile
+    [2] excess_kurtosis_integrated_profile: Excess kurtosis of the integrated pulse profile
+    [3] skewness_integrated_profile: Skewness of the integrated pulse profile
+    [4] mean_dm_snr_curve: Mean of the DM-SNR curve
+    [5] std_dm_snr_curve: Standard deviation of the DM-SNR curve
+    [6] excess_kurtosis_dm_snr_curve: Excess kurtosis of the DM-SNR curve
+    [7] skewness_dm_snr_curve: Skewness of the DM-SNR curve
+[data_loader] === UCI HTRU2 Invariant Check ===
+  provenance     : local_csv:HTRU_2.csv
+  shape          : (17898, 9)  (expected (17898, 9))
+  missing values : 0     (expected 0)
+  duplicate rows : 0     (expected 0)
+  class 0        : 16259 (90.84%)  expected 16259 (90.84%)
+  class 1        : 1639 (9.16%)  expected 1639  (9.16%)
+  features (X excludes target — zero target leakage):
+    [0] mean_integrated_profile: Mean of the integrated pulse profile
+    [1] std_integrated_profile: Standard deviation of the integrated pulse profile
+    [2] excess_kurtosis_integrated_profile: Excess kurtosis of the integrated pulse profile
+    [3] skewness_integrated_profile: Skewness of the integrated pulse profile
+    [4] mean_dm_snr_curve: Mean of the DM-SNR curve
+    [5] std_dm_snr_curve: Standard deviation of the DM-SNR curve
+    [6] excess_kurtosis_dm_snr_curve: Excess kurtosis of the DM-SNR curve
+    [7] skewness_dm_snr_curve: Skewness of the DM-SNR curve
+[data] OK – 17898 rows | class0=16259 class1=1639 | NaNs=0 dups=0
+[data] Official UCI HTRU2 has 17898 rows with 0 missing values. The 2023 IEEE paper used a Kaggle train split of 12528 rows (~70%) with ~3.1% artificially injected missing values imputed via MICE.
+[eda] Saved summary → /home/st1992@unt.ad.unt.edu/softforAI/pulsar-identification/results/metrics/eda_summary.csv
+[eda] Figures (300 DPI) → /home/st1992@unt.ad.unt.edu/softforAI/pulsar-identification/results/figures
+[preprocess] Split OK: train=14318 test=3580 index_overlap=0
+[split] train=14318 test=3580 (stratified 80%/20%)
+[train] Tuning MARS ...
+  best={'clf__nprune': 16} PR-AUC=0.9300
+[train] Tuning KNN ...
+  best k=21 (paper k=15) PR-AUC=0.8962
+[train] Tuning ANN ...
+  best={'clf__activation': 'relu', 'clf__alpha': 0.0001, 'clf__hidden_layer_sizes': [64, 32], 'clf__solver': 'adam'} PR-AUC=0.9290
+[save] /home/st1992@unt.ad.unt.edu/softforAI/pulsar-identification/results/models/mars.joblib
+[save] /home/st1992@unt.ad.unt.edu/softforAI/pulsar-identification/results/models/knn.joblib
+[save] /home/st1992@unt.ad.unt.edu/softforAI/pulsar-identification/results/models/ann.joblib
+[eval] Holdout evaluation (pos_label=1 primary, pos_label=0 paper-aligned) ...
+[evaluate] Saved paper_comparison.csv → /home/st1992@unt.ad.unt.edu/softforAI/pulsar-identification/results/metrics
+model  pulsar_pos1__accuracy  pulsar_pos1__precision  pulsar_pos1__recall  pulsar_pos1__f1  pulsar_pos1__pr_auc  nonpulsar_pos0__precision  nonpulsar_pos0__recall  pulsar_pos1__pulsar_recall_from_cm
+ MARS               0.979330                0.929054             0.838415         0.881410             0.931495                   0.983861                0.993542                            0.838415
+  KNN               0.981006                0.954545             0.832317         0.889251             0.908824                   0.983303                0.996002                            0.832317
+  ANN               0.980726                0.924590             0.859756         0.890995             0.929868                   0.985954                0.992927                            0.859756
+[robustness] Running Experiments A–C ...
+[robustness] Saved results → /home/st1992@unt.ad.unt.edu/softforAI/pulsar-identification/results/metrics/robustness_results.csv
+[audit] Wrote /home/st1992@unt.ad.unt.edu/softforAI/pulsar-identification/results/AUDIT_REPORT.md
+========================================================================
+Done in 1.4 min. Artifacts under results/
+  metrics/paper_comparison.csv
+  figures/08_robustness_degradation.png
+  AUDIT_REPORT.md
+========================================================================

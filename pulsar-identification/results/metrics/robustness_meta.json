@@ -1,0 +1,34 @@
+{
+  "thresholds_pr_optimal": {
+    "MARS": 0.3955468216098614,
+    "KNN": 0.47619047619047616,
+    "ANN": 0.4846561199593571
+  },
+  "sigma_levels": [
+    0.0,
+    0.05,
+    0.1,
+    0.15,
+    0.2,
+    0.3,
+    0.5
+  ],
+  "n_mc": 20,
+  "perturbation_policy": "Raw feature-space Gaussian noise on X_test only; models/scalers never refit on noisy data. std_* features clipped to \u22650 after noise for physical plausibility; kurtosis/skewness/means left unbounded.",
+  "clip_nonnegative_std": true,
+  "top_features": [
+    "excess_kurtosis_integrated_profile",
+    "skewness_integrated_profile",
+    "mean_dm_snr_curve"
+  ],
+  "train_feature_std": {
+    "mean_integrated_profile": 25.58326849040641,
+    "std_integrated_profile": 6.805216935899662,
+    "excess_kurtosis_integrated_profile": 1.0626388140530063,
+    "skewness_integrated_profile": 6.178087437408525,
+    "mean_dm_snr_curve": 28.8145090080299,
+    "std_dm_snr_curve": 19.39671767569318,
+    "excess_kurtosis_dm_snr_curve": 4.506817490037253,
+    "skewness_dm_snr_curve": 106.90833786559678
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "n_train": 14318,
+  "n_test": 3580,
+  "train_class_counts": {
+    "0": 13007,
+    "1": 1311
+  },
+  "test_class_counts": {
+    "0": 3252,
+    "1": 328
+  },
+  "feature_names": [
+    "mean_integrated_profile",
+    "std_integrated_profile",
+    "excess_kurtosis_integrated_profile",
+    "skewness_integrated_profile",
+    "mean_dm_snr_curve",
+    "std_dm_snr_curve",
+    "excess_kurtosis_dm_snr_curve",
+    "skewness_dm_snr_curve"
+  ],
+  "index_overlap": 0,
+  "scaler_policy": "StandardScaler is fit inside model Pipelines on training data / CV folds only \u2014 never on the full dataset or holdout test set."
+}

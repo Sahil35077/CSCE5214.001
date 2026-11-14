@@ -1,0 +1,26 @@
+{
+  "ok": true,
+  "errors": [],
+  "warnings": [],
+  "provenance": "local_csv:HTRU_2.csv",
+  "n_rows": 17898,
+  "n_features": 8,
+  "n_class_0": 16259,
+  "n_class_1": 1639,
+  "prevalence": 0.09157447759526204,
+  "prevalence_pct": 9.16,
+  "class0_pct": 90.84,
+  "n_nan": 0,
+  "n_duplicates": 0,
+  "feature_descriptions": {
+    "mean_integrated_profile": "Mean of the integrated pulse profile",
+    "std_integrated_profile": "Standard deviation of the integrated pulse profile",
+    "excess_kurtosis_integrated_profile": "Excess kurtosis of the integrated pulse profile",
+    "skewness_integrated_profile": "Skewness of the integrated pulse profile",
+    "mean_dm_snr_curve": "Mean of the DM-SNR curve",
+    "std_dm_snr_curve": "Standard deviation of the DM-SNR curve",
+    "excess_kurtosis_dm_snr_curve": "Excess kurtosis of the DM-SNR curve",
+    "skewness_dm_snr_curve": "Skewness of the DM-SNR curve"
+  },
+  "paper_vs_uci_note": "Official UCI HTRU2 has 17898 rows with 0 missing values. The 2023 IEEE paper used a Kaggle train split of 12528 rows (~70%) with ~3.1% artificially injected missing values imputed via MICE."
+}

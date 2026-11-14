@@ -1,0 +1,11 @@
+{
+  "n_test": 3580,
+  "models": [
+    "MARS",
+    "KNN",
+    "ANN"
+  ],
+  "primary_metrics": "pos_label=1 (Pulsar) \u2014 columns pulsar_pos1__*",
+  "paper_aligned_metrics": "pos_label=0 (Non-Pulsar) \u2014 columns nonpulsar_pos0__* mirror caret Tables II/IV/VI",
+  "prevalence": 0.09157447759526204
+}

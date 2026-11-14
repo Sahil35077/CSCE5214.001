@@ -1,0 +1,82 @@
+{
+  "paper_missingness_report": {
+    "mode": "simulate_paper_missingness",
+    "n_rows": 12528,
+    "n_missing_injected": 3107,
+    "missing_fraction": 0.031000558748403576,
+    "missing_columns": [
+      "excess_kurtosis_integrated_profile",
+      "std_dm_snr_curve",
+      "skewness_dm_snr_curve"
+    ],
+    "class_counts": {
+      "0": 11381,
+      "1": 1147
+    },
+    "imputation_policy": "IterativeImputer (MICE) is fit on X_train ONLY after the stratified split, then transform is applied to X_test \u2014 no test leakage.",
+    "note": "Approximates the 2023 IEEE paper's Kaggle train split (12,528 rows, ~3.1% missingness). Primary results use official 17,898-row UCI with zero missing values.",
+    "n_train": 10022,
+    "n_test": 2506,
+    "train_class": {
+      "0": 9104,
+      "1": 918
+    },
+    "test_class": {
+      "0": 2277,
+      "1": 229
+    }
+  },
+  "holdout_metrics_with_primary_hparams": [
+    {
+      "model": "MARS",
+      "pos1_accuracy": 0.975658419792498,
+      "pos1_precision": 0.9158415841584159,
+      "pos1_recall": 0.8078602620087336,
+      "pos1_f1": 0.8584686774941995,
+      "pos1_pr_auc": 0.9119910934163211,
+      "pos1_roc_auc": 0.9744339157667428,
+      "pos1_balanced_accuracy": 0.9001971490105152,
+      "pos1_specificity": 0.9925340360122968,
+      "pos1_mcc": 0.8472007283260777,
+      "pos1_kappa": 0.845209959800318,
+      "TN": 2260,
+      "FP": 17,
+      "FN": 44,
+      "TP": 185
+    },
+    {
+      "model": "KNN",
+      "pos1_accuracy": 0.9732641660015962,
+      "pos1_precision": 0.9175257731958762,
+      "pos1_recall": 0.777292576419214,
+      "pos1_f1": 0.8416075650118203,
+      "pos1_pr_auc": 0.8675192880950502,
+      "pos1_roc_auc": 0.9477267453344917,
+      "pos1_balanced_accuracy": 0.8851328933918643,
+      "pos1_specificity": 0.9929732103645147,
+      "pos1_mcc": 0.830510418070517,
+      "pos1_kappa": 0.8271165358643967,
+      "TN": 2261,
+      "FP": 16,
+      "FN": 51,
+      "TP": 178
+    },
+    {
+      "model": "ANN",
+      "pos1_accuracy": 0.9764565043894653,
+      "pos1_precision": 0.9009433962264151,
+      "pos1_recall": 0.834061135371179,
+      "pos1_f1": 0.8662131519274376,
+      "pos1_pr_auc": 0.9129011891984984,
+      "pos1_roc_auc": 0.9758569173796057,
+      "pos1_balanced_accuracy": 0.9124192369873023,
+      "pos1_specificity": 0.9907773386034255,
+      "pos1_mcc": 0.8540897882023178,
+      "pos1_kappa": 0.8533267199047666,
+      "TN": 2256,
+      "FP": 21,
+      "FN": 38,
+      "TP": 191
+    }
+  ]
+}

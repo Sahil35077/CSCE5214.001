@@ -1,0 +1,385 @@
+{
+  "mars": {
+    "best_params": {
+      "clf__nprune": 16
+    },
+    "best_score_pr_auc": 0.9300433643004206,
+    "cv_results": {
+      "params": [
+        {
+          "clf__nprune": 2
+        },
+        {
+          "clf__nprune": 4
+        },
+        {
+          "clf__nprune": 6
+        },
+        {
+          "clf__nprune": 8
+        },
+        {
+          "clf__nprune": 10
+        },
+        {
+          "clf__nprune": 12
+        },
+        {
+          "clf__nprune": 14
+        },
+        {
+          "clf__nprune": 16
+        }
+      ],
+      "mean_test_score": [
+        0.8765653806521261,
+        0.9045531632286407,
+        0.9175458582643915,
+        0.9218944912019128,
+        0.924539930598492,
+        0.9264381601096743,
+        0.9286694736429688,
+        0.9300433643004206
+      ],
+      "std_test_score": [
+        0.026213811351921964,
+        0.018681964902924543,
+        0.01912584011540939,
+        0.01706188460140124,
+        0.016673146650610555,
+        0.016230957288898618,
+        0.015336164930634645,
+        0.0157136052641164
+      ]
+    },
+    "nprune_grid": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14,
+      16
+    ],
+    "quick": false
+  },
+  "knn": {
+    "best_params": {
+      "clf__n_neighbors": 21
+    },
+    "best_score_pr_auc": 0.8961613325686844,
+    "paper_optimal_k": 15,
+    "selected_k": 21,
+    "cv_results": {
+      "params": [
+        {
+          "clf__n_neighbors": 1
+        },
+        {
+          "clf__n_neighbors": 3
+        },
+        {
+          "clf__n_neighbors": 5
+        },
+        {
+          "clf__n_neighbors": 7
+        },
+        {
+          "clf__n_neighbors": 9
+        },
+        {
+          "clf__n_neighbors": 11
+        },
+        {
+          "clf__n_neighbors": 13
+        },
+        {
+          "clf__n_neighbors": 15
+        },
+        {
+          "clf__n_neighbors": 17
+        },
+        {
+          "clf__n_neighbors": 19
+        },
+        {
+          "clf__n_neighbors": 21
+        }
+      ],
+      "mean_test_score_pr_auc": [
+        0.722305427443299,
+        0.849251067250439,
+        0.8712144073449087,
+        0.8821099628484811,
+        0.8860437772221437,
+        0.888972864121582,
+        0.8907740649517301,
+        0.8915529111541151,
+        0.893572828184779,
+        0.8940504149223173,
+        0.8961613325686844
+      ],
+      "std_test_score_pr_auc": [
+        0.03214031047744934,
+        0.02988251677395426,
+        0.02746619510530056,
+        0.026881281639317193,
+        0.026620364244416085,
+        0.025834822906016096,
+        0.026569676782244644,
+        0.02476003816711703,
+        0.022511120860438074,
+        0.022585168376912348,
+        0.021588620256282876
+      ],
+      "mean_test_score_accuracy": [
+        0.9709457516263319,
+        0.9776508822339081,
+        0.9779533754442401,
+        0.9780697465147239,
+        0.9775343647642583,
+        0.977394618626919,
+        0.9776508009010382,
+        0.9772317414213342,
+        0.9772317414213342,
+        0.9770455054154679,
+        0.9771386152851139
+      ],
+      "std_test_score_accuracy": [
+        0.003618196431824081,
+        0.003990179490108855,
+        0.0035864409759019506,
+        0.003258383074461991,
+        0.003392125850236177,
+        0.0033895304025567717,
+        0.0033479638281860725,
+        0.003222292833671117,
+        0.0033266935676928926,
+        0.003470657360545803,
+        0.0035366095878567477
+      ]
+    },
+    "n_neighbors_grid": [
+      1,
+      3,
+      5,
+      7,
+      9,
+      11,
+      13,
+      15,
+      17,
+      19,
+      21
+    ],
+    "quick": false
+  },
+  "ann": {
+    "best_params": {
+      "clf__activation": "relu",
+      "clf__alpha": 0.0001,
+      "clf__hidden_layer_sizes": [
+        64,
+        32
+      ],
+      "clf__solver": "adam"
+    },
+    "best_score_pr_auc": 0.9290187624727327,
+    "cv_results": {
+      "params": [
+        {
+          "clf__activation": "relu",
+          "clf__alpha": 0.0001,
+          "clf__hidden_layer_sizes": [
+            16
+          ],
+          "clf__solver": "adam"
+        },
+        {
+          "clf__activation": "relu",
+          "clf__alpha": 0.0001,
+          "clf__hidden_layer_sizes": [
+            32
+          ],
+          "clf__solver": "adam"
+        },
+        {
+          "clf__activation": "relu",
+          "clf__alpha": 0.0001,
+          "clf__hidden_layer_sizes": [
+            64,
+            32
+          ],
+          "clf__solver": "adam"
+        },
+        {
+          "clf__activation": "relu",
+          "clf__alpha": 0.001,
+          "clf__hidden_layer_sizes": [
+            16
+          ],
+          "clf__solver": "adam"
+        },
+        {
+          "clf__activation": "relu",
+          "clf__alpha": 0.001,
+          "clf__hidden_layer_sizes": [
+            32
+          ],
+          "clf__solver": "adam"
+        },
+        {
+          "clf__activation": "relu",
+          "clf__alpha": 0.001,
+          "clf__hidden_layer_sizes": [
+            64,
+            32
+          ],
+          "clf__solver": "adam"
+        },
+        {
+          "clf__activation": "relu",
+          "clf__alpha": 0.01,
+          "clf__hidden_layer_sizes": [
+            16
+          ],
+          "clf__solver": "adam"
+        },
+        {
+          "clf__activation": "relu",
+          "clf__alpha": 0.01,
+          "clf__hidden_layer_sizes": [
+            32
+          ],
+          "clf__solver": "adam"
+        },
+        {
+          "clf__activation": "relu",
+          "clf__alpha": 0.01,
+          "clf__hidden_layer_sizes": [
+            64,
+            32
+          ],
+          "clf__solver": "adam"
+        },
+        {
+          "clf__activation": "tanh",
+          "clf__alpha": 0.0001,
+          "clf__hidden_layer_sizes": [
+            16
+          ],
+          "clf__solver": "adam"
+        },
+        {
+          "clf__activation": "tanh",
+          "clf__alpha": 0.0001,
+          "clf__hidden_layer_sizes": [
+            32
+          ],
+          "clf__solver": "adam"
+        },
+        {
+          "clf__activation": "tanh",
+          "clf__alpha": 0.0001,
+          "clf__hidden_layer_sizes": [
+            64,
+            32
+          ],
+          "clf__solver": "adam"
+        },
+        {
+          "clf__activation": "tanh",
+          "clf__alpha": 0.001,
+          "clf__hidden_layer_sizes": [
+            16
+          ],
+          "clf__solver": "adam"
+        },
+        {
+          "clf__activation": "tanh",
+          "clf__alpha": 0.001,
+          "clf__hidden_layer_sizes": [
+            32
+          ],
+          "clf__solver": "adam"
+        },
+        {
+          "clf__activation": "tanh",
+          "clf__alpha": 0.001,
+          "clf__hidden_layer_sizes": [
+            64,
+            32
+          ],
+          "clf__solver": "adam"
+        },
+        {
+          "clf__activation": "tanh",
+          "clf__alpha": 0.01,
+          "clf__hidden_layer_sizes": [
+            16
+          ],
+          "clf__solver": "adam"
+        },
+        {
+          "clf__activation": "tanh",
+          "clf__alpha": 0.01,
+          "clf__hidden_layer_sizes": [
+            32
+          ],
+          "clf__solver": "adam"
+        },
+        {
+          "clf__activation": "tanh",
+          "clf__alpha": 0.01,
+          "clf__hidden_layer_sizes": [
+            64,
+            32
+          ],
+          "clf__solver": "adam"
+        }
+      ],
+      "mean_test_score": [
+        0.9178615732023475,
+        0.9206702406137862,
+        0.9290187624727327,
+        0.9177115265055409,
+        0.9213391796817424,
+        0.9286783530523556,
+        0.9178134247917017,
+        0.9209274514095404,
+        0.928469593486909,
+        0.9122810971502507,
+        0.9102778697724586,
+        0.9281274740449839,
+        0.9122743572129696,
+        0.9102701945373585,
+        0.927988202192622,
+        0.9122879809046142,
+        0.9103336247590675,
+        0.9275099747053223
+      ],
+      "std_test_score": [
+        0.022569453972647858,
+        0.01778942685250544,
+        0.016067162953695785,
+        0.022547992218447003,
+        0.01756298427643805,
+        0.016231454733997133,
+        0.02264564467014296,
+        0.016845418165098942,
+        0.0165480158619992,
+        0.019178348401961875,
+        0.01966898342381126,
+        0.017651615953913468,
+        0.019176839654228273,
+        0.019653327116740185,
+        0.017547638788161395,
+        0.01919144701113168,
+        0.01971243858473808,
+        0.01852842078995272
+      ]
+    },
+    "quick": false
+  }
+}
